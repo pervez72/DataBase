@@ -1,0 +1,23 @@
+
+##### Order by >> The ORDER BY keyword is used to sort the result-set in ascending or descending order.
+select  deptno,sum(sal) 
+from emp
+group by deptno order by deptno
+
+####joining >> two or more table join/merge
+>> join name :
+* INNER JOIN  
+* LEFT JOIN  
+* RIGHT JOIN  
+* FULL JOIN  
+* CROSS JOIN  
+* SELF JOIN  
+* NATURAL JOIN
+       
+##cartician join or natural join 
+	
+	
+	
+	
+
+
