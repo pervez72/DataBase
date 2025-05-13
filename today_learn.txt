@@ -1,0 +1,37 @@
+
+#### Sql Aggrate Function
+// normally see data from table 
+select avg(sal),min(SAL),max(sal) 
+from emp
+
+// now table name customize and see data >> here as=alias(customize name) 
+select sum(sal) as total_salary,avg(sal) as avg_sal, max(sal) as max_salary
+from emp
+
+// most senior and junior emp see
+select min(HIREDATE) as very_old_emp, max(HIREDATE) as freshear
+from emp
+
+// now dept dept=20 inside what number of emp working now?
+select count(*) 
+from emp
+where deptNO=20
+
+// what number of people commision ? 
+select count(comm) 
+from emp
+where deptNO=20
+
+// inside columns word base qurery >> here like keyword use for maching word inside letter
+select sum(sal),max(sal)
+from emp 
+where job like '%MAN%'; // %MAN >> last man match,'%MAN%>> middle man word
+
+#### Group By
+
+select deptNO,sum(sal)
+from emp
+group by deptno;
+
+
+ 
