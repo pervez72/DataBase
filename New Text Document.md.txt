@@ -1,0 +1,70 @@
+
+Set Serveroutput on
+Declare
+a number(10);
+b number(20);
+c number(10);
+
+Begin 
+a:=10;
+b:=20;
+
+c:=a+b;
+
+dbms_output.put_line('Total');
+dbms_output.put_line(c);
+
+End;
+
+
+2..........................
+
+Set Serveroutput on
+Declare
+a number(10);
+b number(20);
+c number(10);
+
+Begin 
+a:=10;
+b:=20;
+
+c:=a+b;
+
+dbms_output.put_line('Total' ||c ); // toatal value show same line 
+
+End;
+
+
+
+** Dataset Describe >> describe dept
+
+############
+
+Declear
+
+v_deptno number(10);
+v_dname varchar2(10);
+v_loc  varchar2(10);
+
+begin 
+
+v_deptno:= &v_deptbo;
+
+
+Select dname,loc
+Into v_dname,v_loc
+
+from dept
+
+where deptno=v_deptno;
+
+
+dbms_output.put_line('Dname is :' || v_dname);
+
+dbms_output.put_line('Location is :' || v_loc);
+
+End;
+
+//// this code work see dept information and 
+
