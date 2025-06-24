@@ -1,0 +1,42 @@
+#### General Procedure 
+
+create or procedure proc_16
+
+IS
+v_deptno number(10)
+v_name number(10)
+v_loc varchar2(10)
+
+Begin
+
+select Deptno,Dname, Loc
+Into v_deptno, v_name,v_Loc
+from dept
+where deptno=10;
+
+dbms_output.put_line('Deptno  :' || v_deptno);
+dbms_output.put_line('Dname  :' || v_name);
+dbms_output.put_line('Loc  :' || v_Loc);
+End;
+// this code some problem 
+
+############# Multiple Dml Operation can be possible in procedure
+CREATE OR REPLACE PROCEDURE proc_test
+is 
+
+Begin 
+
+update Dept 
+set Dname ='aaa';
+
+Update Str_16
+set Balance = Balance + 500;
+
+dbms_output.put_line('Update Successfully');
+
+End;
+
+######## Multiple Dml Operation can be possible in procedure with parameter
+
+
+
